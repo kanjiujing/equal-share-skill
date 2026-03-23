@@ -11,7 +11,7 @@
 
 | 名称 | 类型 | 必填 | 默认值 | 说明 |
 |:---|:---|:---|:---|:---|
-| `interfaceId` | `String` | 是 | "41" | 接口ID |
+| `interfaceId` | `String` | 是 | "42" | 接口ID |
 | `stockCodeList` | `List<String>` | 否 | - | 单次查询股票代码列表（不超过50个） |
 
 ### 返回参数
@@ -41,7 +41,7 @@ api = KjjApi('bear your token')
 token = os.getenv('KJJ_API_KEY')  
 # 调用接口
 data = api.query_kjj_data(
-    interfaceId="41",
+    interfaceId="42",
     stockCodeList=None,  # List<String>  # 默认: 
 )
 ```
