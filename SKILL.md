@@ -84,6 +84,7 @@ export KJJ_API_TOKEN="your_key_here"
     }
   }
 }
+```
 
 ## 触发指令
 
