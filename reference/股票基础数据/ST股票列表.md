@@ -52,7 +52,6 @@ ResultData.data 为 List，元素为ST股票
 ```python
 from equal_data import KjjApi 
 api = KjjApi('bear your token') 
-token = os.getenv('KJJ_API_KEY')  
 # 调用接口
 data = api.query_kjj_data(
     interfaceId="6",
