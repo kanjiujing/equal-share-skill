@@ -11,8 +11,11 @@
 
 | 名称 | 类型 | 必填 | 默认值 | 说明 |
 |:---|:---|:---|:---|:---|
-| `interfaceId` | `String` | 是 | "42" | 接口ID |
-| `stockCodeList` | `List<String>` | 否 | - | 单次查询股票代码列表（不超过50个） |
+| `interfaceId` | `String` | 是 | "STOCK_QUOTE_HISTORY_QUOTE_LIST_C82F9954" | 接口ID |
+| `stockCodeList` | `List<String>` | 否 | - | 单次查询股票代码列表（不超过50个），示例：['000001','600519'] |
+| `tradeDate` | `String` | 否 | - | 交易日，示例：2024-03-20 |
+| `startDate` | `String` | 否 | - | 开始日期，示例：2023-01-01 |
+| `endDate` | `String` | 否 | - | 结束日期，示例：2023-12-31 |
 
 ### 返回参数
 
@@ -40,8 +43,11 @@ from equal_data import KjjApi
 api = KjjApi('bear your token') 
 # 调用接口
 data = api.query_kjj_data(
-    interfaceId="42",
+    interfaceId="STOCK_QUOTE_HISTORY_QUOTE_LIST_C82F9954",
     stockCodeList=None,  # List<String>  # 默认: 
+    tradeDate=None,  # String  # 默认: 
+    startDate=None,  # String  # 默认: 
+    endDate=None,  # String  # 默认: 
 )
 ```
 

@@ -11,10 +11,10 @@
 
 | 名称 | 类型 | 必填 | 默认值 | 说明 |
 |:---|:---|:---|:---|:---|
-| `interfaceId` | `String` | 是 | "6" | 接口ID |
+| `interfaceId` | `String` | 是 | "STOCK_ST_LIST_D9254E18" | 接口ID |
 | `pageNum` | `Integer` | 否 | `0` | 分页偏移量，从 0 开始（第 1 页为 0，第 2 页为 pageSize） |
 | `pageSize` | `Integer` | 否 | `10` | 每页条数 |
-| `stockList` | `List<String>` | 否 | - | 股票代码/名称,如果传递的股票不是ST，会返回空列表 |
+| `stockList` | `List<String>` | 否 | - | 股票代码/名称,如果传递的股票不是ST，会返回空列表，示例：['000001','600519'] |
 
 ### 返回参数
 
@@ -54,7 +54,7 @@ from equal_data import KjjApi
 api = KjjApi('bear your token') 
 # 调用接口
 data = api.query_kjj_data(
-    interfaceId="6",
+    interfaceId="STOCK_ST_LIST_D9254E18",
     pageNum=None,  # Integer  # 默认: 0
     pageSize=None,  # Integer  # 默认: 10
     stockList=None,  # List<String>  # 默认: 
