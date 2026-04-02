@@ -5,7 +5,7 @@
 
 ### 描述
 
-获取ST股票列表
+查询A股范围内，所有ST股票，包含公司基本信息，可指定需要查询的公司的股票代码。分页每页最多20条。
 
 ### 请求参数
 
@@ -14,7 +14,7 @@
 | `interfaceId` | `str` | 是 | "STOCK_ST_LIST_D9254E18" | 接口ID |
 | `pageNum` | `int` | 否 | `0` | 分页偏移量，从 0 开始（第 1 页为 0，第 2 页为 pageSize） |
 | `pageSize` | `int` | 否 | `10` | 每页条数 |
-| `stockList` | `list[str]` | 否 | - | 股票代码/名称,如果传递的股票不是ST，会返回空列表，示例：['000001','600519'] |
+| `stockCodes` | `str` | 是 | - | 股票代码或公司全称、简称，可多个使用逗号隔开；示例：000001,600519 |
 
 ### 返回参数
 
@@ -57,7 +57,7 @@ data = api.query_kjj_data(
     interfaceId="STOCK_ST_LIST_D9254E18",
     pageNum=None,  # int  # 默认: 0
     pageSize=None,  # int  # 默认: 10
-    stockList=None,  # list[str]  # 默认: 
+    stockCodes=None,  # str  # 默认: 
 )
 ```
 
