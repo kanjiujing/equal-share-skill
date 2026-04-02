@@ -28,16 +28,16 @@ pip install equal-data -i https://pypi.tuna.tsinghua.edu.cn/simple
 - 根据接口文档，使用python代码获取数据。（如**高管增减持金额排行榜**接口）
 
 ```python
-from equal_data import KjjApi
+from equal_data import EqualDataApi 
 import os
 
 # 读取环境变量中的API_KEY, 或者读取本地记录的API_KEY
 API_KEY = os.getenv('EQUAL_DATA_API_KEY')
 
-api = KjjApi(API_KEY)
+api = EqualDataApi(API_KEY)
 
 # 高管持股变动-增减持金额排行榜列表
-data = api.query_kjj_data(
+data = api.query_equal_data(
     interfaceId="B6",
     period=None,  # int  # 默认: 1
     changeType=None,  # int  # 默认:
@@ -68,7 +68,7 @@ data = api.query_kjj_data(
 
 equaldata官网(https://equal-data.com/)注册，获取API_KEY，
 
-**方式 A：配置环境变量**。
+**方式 A：配置环境变量**
 
 ```bash
 # macOS 添加到 ~/.zshrc，Linux 添加到 ~/.bashrc
