@@ -39,7 +39,7 @@ ResultData.data 为 List，元素为历史日K行情列表
 
 ```python
 from equal_data import KjjApi 
-api = KjjApi('bear your API_KEY') 
+api = KjjApi('your API_KEY') 
 # 调用接口
 data = api.query_kjj_data(
     interfaceId="G2",
