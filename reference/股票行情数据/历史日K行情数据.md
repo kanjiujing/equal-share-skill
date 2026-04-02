@@ -11,7 +11,7 @@
 
 | 名称 | 类型 | 必填 | 默认值 | 说明 |
 |:---|:---|:---|:---|:---|
-| `interfaceId` | `str` | 是 | "STOCK_QUOTE_HISTORY_QUOTE_LIST_C82F9954" | 接口ID |
+| `interfaceId` | `str` | 是 | "G2" | 接口ID |
 | `stockCodes` | `str` | 是 | - | 支持查询单只股票和多只股票（单次查询不超过20个），如果是多只，以逗号隔开；示例：'000001',<br>'600519' |
 | `startDate` | `str` | 否 | - | 开始日期 startDate和endDate区间不能超过一年，如超过数据会截断，如果都为空，<br>则查询最新交易日，示例：2023-01-01 |
 | `endDate` | `str` | 否 | - | 结束日期 startDate和endDate区间不能超过一年，如超过数据会截断，如果都为空，<br>则查询最新交易日，示例：2023-12-31 |
@@ -39,10 +39,10 @@ ResultData.data 为 List，元素为历史日K行情列表
 
 ```python
 from equal_data import KjjApi 
-api = KjjApi('bear your token') 
+api = KjjApi('bear your API_KEY') 
 # 调用接口
 data = api.query_kjj_data(
-    interfaceId="STOCK_QUOTE_HISTORY_QUOTE_LIST_C82F9954",
+    interfaceId="G2",
     stockCodes=None,  # str  # 默认: 
     startDate=None,  # str  # 默认: 
     endDate=None,  # str  # 默认: 

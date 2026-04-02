@@ -11,7 +11,7 @@
 
 | 名称 | 类型 | 必填 | 默认值 | 说明 |
 |:---|:---|:---|:---|:---|
-| `interfaceId` | `str` | 是 | "STOCK_ST_LIST_D9254E18" | 接口ID |
+| `interfaceId` | `str` | 是 | "F4" | 接口ID |
 | `pageNum` | `int` | 否 | `0` | 分页偏移量，从 0 开始（第 1 页为 0，第 2 页为 pageSize） |
 | `pageSize` | `int` | 否 | `10` | 每页条数 |
 | `stockCodes` | `str` | 是 | - | 股票代码或公司全称、简称，可多个使用逗号隔开；示例：000001,600519 |
@@ -51,10 +51,10 @@ ResultData.data 为 List，元素为ST股票
 
 ```python
 from equal_data import KjjApi 
-api = KjjApi('bear your token') 
+api = KjjApi('bear your API_KEY') 
 # 调用接口
 data = api.query_kjj_data(
-    interfaceId="STOCK_ST_LIST_D9254E18",
+    interfaceId="F4",
     pageNum=None,  # int  # 默认: 0
     pageSize=None,  # int  # 默认: 10
     stockCodes=None,  # str  # 默认: 
